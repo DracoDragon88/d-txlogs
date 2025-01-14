@@ -26,7 +26,7 @@ local function logger(src, type, data)
     if data then
         if GetResourceState('d_lib') == 'started' then
             exports['d_lib']:SendWebhook({
-                webhook = Config.txAdminWebhook,
+                webhook = 'txeventlogs',
                 anticheat = false,
                 color = 65280,
                 title = 'Tx Event Logs - '..tostring(data.action),
